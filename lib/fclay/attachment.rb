@@ -208,11 +208,11 @@ module Fclay
 
     def fetch_file_name
 
-      return if self.file_name.present?
+      # return if self.file_name.present?
       ext = fetch_extension
 
-      self.file_name = try(:fclay_attachment_filename)
-      self.file_name = SecureRandom.hex unless self.file_name
+      # self.file_name = try(:fclay_attachment_filename)
+      self.file_name = SecureRandom.hex #unless self.file_name
       self.file_name += ".#{ext}" if ext
 
     end
